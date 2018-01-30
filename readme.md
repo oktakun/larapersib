@@ -1,4 +1,4 @@
-# lapapersib
+# LARAPERSIB
 
 #### PERSIB Bandung Timeline With Laravel
 

@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 use App\Tag;
 use Session;
+
 
 class TagController extends Controller
 {
@@ -18,7 +23,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tags = Tag::all();
+        $tags = Tag::OrderBy('id', 'ASC')->paginate(9);
         return view('tags.index')->withTags($tags);
     }
 

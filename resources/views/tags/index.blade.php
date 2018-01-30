@@ -34,7 +34,9 @@
                       @endforeach
                     </tbody>
                 </table>
-
+                <div class="text-center">
+                  {!! $tags->links(); !!}
+                </div>
             </div>
         </div>
     </div>
