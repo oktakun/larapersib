@@ -1,7 +1,9 @@
 # Git-ing larapersib
 
-#### Persib bandung timeline with laravel.
+#### PERSIB Bandung Timeline With Laravel
 
-# Credit By : Okta Firdaus ( oktakun )
+# Credit : Okta Firdaus ( oktakun )
 # oktafirdaus231111@gmail.com
 # facebook.com/OktaVanDaus
+# https://www.linkedin.com/in/okta-firdaus-853b5a146/
+# instagram.com/oktakun69
