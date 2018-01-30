@@ -4,6 +4,7 @@
 
 # Credit : Okta Firdaus ( oktakun )
 # oktafirdaus231111@gmail.com
-# facebook.com/OktaVanDaus
+# https://www.facebook.com/OktaVanDaus
 # https://www.linkedin.com/in/okta-firdaus-853b5a146/
-# instagram.com/oktakun69
+# https://www.instagram.com/oktakun69
+# https://www.twitter.com/OkFdaus
