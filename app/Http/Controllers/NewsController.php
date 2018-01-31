@@ -12,6 +12,7 @@ use App\Tag;
 use Session;
 use Image;
 use Storage;
+use Purifier;
 
 class NewsController extends Controller
 {
@@ -60,7 +61,7 @@ class NewsController extends Controller
 $post->title = $request->title;
 $post->summary = $request->summary;
 $post->slug = $request->slug;
-$post->content = $request->content;
+$post->content = Purifier::clean($request->content);
 $post->view_count = $request->view_count;
 $post->like_count = $request->like_count;
 $post->share_count = $request->share_count;
@@ -95,7 +96,7 @@ return redirect()->route('news.show', $post->id);
     public function show($id)
     {
         $post = News::find($id);
-        
+
         return view('news.show')->withPost($post);
     }
 
@@ -157,7 +158,7 @@ return redirect()->route('news.show', $post->id);
         $post->title        = $request->input('title');
         $post->summary      = $request->input('summary');
         $post->slug         = $request->input('slug');
-        $post->content      = $request->input('content');
+        $post->content      = Purifier::clean($request->input('content'));
         $post->view_count   = $request->input('view_count');
         $post->like_count   = $request->input('like_count');
         $post->share_count  = $request->input('share_count');
