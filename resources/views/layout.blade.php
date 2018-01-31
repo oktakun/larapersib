@@ -55,9 +55,9 @@
                         <li>
                             <a href="#"><i class="fa fa-info-circle"></i> <span class="nav-label">Info</span><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
-                                <li><a href="#">Klub</a></li>
-                                <li><a href="#">Pemain</a></li>
                                 <li><a href="#">Klasmen</a></li>
+                                <li><a href="#">Pemain</a></li>
+                                <li><a href="#">Klub</a></li>
                                 <li><a href="#">Schedule Dan Tiket</a></li>
                                 <li><a href="#">Event</a></li>
                                 <li><a href="#">History</a></li>

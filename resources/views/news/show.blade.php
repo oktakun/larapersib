@@ -5,39 +5,125 @@
 @section('pages')
 
 <hr>
+
 <div class="row">
-                                 <div class="col-md-10">
-                                     <div class="panel panel-info">
-                                         <div class="panel-heading">
-                                             <i class="fa fa-info-circle"></i> Info POST
-                                         </div>
-                                         <div class="panel-body">
-                                           <p><h3>Judul POST :</h3> {{ $post->title }}<br></p>
-                                           <p><h3>Summary :</h3> {{ $post->summary }}<br></p>
-                                           <p><h3>Slug URL :</h3><a href="{{ route('berita.single', $post->slug) }}"> {{ url('berita/'.$post->slug) }} </a><br></p>
-                                           <p><h3>Conten POST :</h3> {!! $post->content !!}<br></p>
+  <div class="col-lg-7">
+      <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <span class="label label-primary pull-right">Title POST</span>
+              <h5>{{ $post->title }}</h5>
+          </div>
 
-                                           <p><h3>Views :</h3> {{ $post->view_count }}<br></p>
-                                           <p><h3>Likes :</h3> {{ $post->like_count }}<br></p>
-                                           <p><h3>Shares :</h3> {{ $post->share_count }}<br></p>
-                                           <p><h3>Is Featured :</h3> {{ $post->is_featured }}<br></p>
-                                           <p><h3>Is Active :</h3> {{ $post->is_active }}<br></p>
-                                           <p><h3>Dibuat POST :</h3> {{ date('M j, Y H:ia', strtotime($post->created_at)) }}<br></p>
-                                           <p><h3>Update Terakhir :</h3> {{ date('M j, Y H:ia', strtotime($post->updated_at)) }}<br></p>
-                                           <p><h3>OPTION : </h3></p>
-                                           <p></p>
-                                          <p>
+          <div class="ibox-content">
+
+              <h1 class="no-margins">{{ $post->summary }}</h1>
+              <p>
+                <small>{!! $post->content !!}</small>
+              </p>
+          </div>
+      </div>
+  </div>
+
+  <div class="col-lg-4">
+      <div class="ibox float-e-margins">
+          <div class="ibox-title">
+              <span class="label label-primary pull-right">Image</span>
+              <h5>Featured Image</h5>
+          </div>
+          <div class="ibox-content">
+
+              <div class="row">
+                <center>
+                  <div class="col-md-2">
+                      <img src="{{ asset('images/'. $post->image) }}" width="380" height="180">
+                  </div>
+                </center>
+              </div>
+
+
+          </div>
+      </div>
+  </div>
+
+  <div class="col-lg-2">
+      <div class="ibox float-e-margins">
+          <div class="ibox-title">
+              <span class="label label-primary pull-right">Total</span>
+              <h5>Visit Site</h5>
+          </div>
+          <div class="ibox-content">
+
+              <div class="row">
+                  <div class="col-md-5">
+                      <h1 class="no-margins">{{ $post->view_count }}</h1>
+                      <div class="font-bold text-navy"><i class="fa fa-eye"></i> <small>View</small></div>
+                  </div>
+                  <div class="col-md-5">
+                      <h1 class="no-margins">{{ $post->like_count }}</h1>
+                      <div class="font-bold text-navy"><i class="fa fa-thumbs-up"></i> <small>Like</small></div>
+                  </div>
+                  <div class="col-md-5">
+                      <h1 class="no-margins">{{ $post->share_count }}</h1>
+                      <div class="font-bold text-navy"><i class="fa fa-share-alt"></i> <small>Share</small></div>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+  </div>
 
 
 
-                                          </p>
-                                         </div>
-                                         <div class="panel-footer">
-                                            ID POST : {{ $post->id }}
-                                         </div>
-                                     </div>
+  <div class="col-lg-2">
+      <div class="ibox float-e-margins">
+          <div class="ibox-title">
 
-                                 </div>
+              <h5>Detail Content</h5>
+          </div>
+          <div class="ibox-content">
+              <div class="row">
+                  <div class="col-md-10">
+                      <p>
+                        <h4>Date POST</h4>
+                      <small> {{ $post->created_at }} </small>
+                    </p>
+                      <p>
+                        <h4>Update POST</h4>
+                        <small> {{ $post->updated_at }} </small>
+                      </p>
+                      <p>
+                        <h4>Featured</h4>
+                        <small>
+
+                          @if($post->is_featured == 0)
+                          off
+                          @elseif($post->is_featured == 1)
+                          on
+                          @endif
+
+                         </small>
+                      </p>
+                      <p>
+                        <h4>Active</h4>
+                        <small>
+
+                          @if($post->is_active == 0)
+                          off
+                          @elseif($post->is_active == 1)
+                          on
+                          @endif
+
+                        </small>
+                      </p>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+  </div>
+
 </div>
 
 @endsection

@@ -95,6 +95,7 @@ return redirect()->route('news.show', $post->id);
     public function show($id)
     {
         $post = News::find($id);
+        
         return view('news.show')->withPost($post);
     }
 
@@ -205,7 +206,7 @@ return redirect()->route('news.show', $post->id);
     {
         $post = News::find($id);
         $post->tags()->detach();
-        
+
         Storage::delete($post->image);
 
 
