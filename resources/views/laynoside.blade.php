@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/id/1/12/Logo_Persib.png">
     <title>PERSIB | @yield('title')</title>
-
+    
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
     <!-- Toastr style -->

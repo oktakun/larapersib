@@ -28,7 +28,7 @@
         <div class="form-group">
             {{ Form::checkbox('remember') }}&nbsp{{ Form::label('remember', 'remember me') }}
         </div>
-
+        
         {{ Form::submit('Login', ['class' => 'btn btn-primary btn-block btn-rounded btn-outline']) }}
         {!! Form::close() !!}
         <br>
