@@ -40,7 +40,7 @@ Route::get('/', function () {
   Route::get('news.create', 'NewsController@create');
   Route::resource('news', 'NewsController');
   Route::resource('tags', 'TagController', ['except' => ['create']]);
-
+  Route::resource('jadwal', 'JadwalController');
 });
 
 

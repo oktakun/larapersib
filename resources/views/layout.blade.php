@@ -58,7 +58,7 @@
                                 <li><a href="#">Klasmen</a></li>
                                 <li><a href="#">Pemain</a></li>
                                 <li><a href="#">Klub</a></li>
-                                <li><a href="#">Schedule Dan Tiket</a></li>
+                                <li><a href="{{ route('jadwal.index')}}">Schedule Dan Tiket</a></li>
                                 <li><a href="#">Event</a></li>
                                 <li><a href="#">History</a></li>
                             </ul>
