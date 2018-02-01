@@ -4,7 +4,6 @@
 
 @section('pages')
 
-<h4>
 <div class="wrapper wrapper-content animated shake">
 <div class="row border-bottom white-bg dashboard-header">
               <div class="col-lg-12">
@@ -102,9 +101,11 @@
                               @endforeach
                             </tbody>
                         </table>
+
                         <div class="text-center">
                           {!! $news->links(); !!}
                         </div>
+
                       </div>
                   </div>
               </div>
