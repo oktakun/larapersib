@@ -41,6 +41,7 @@ Route::get('/', function () {
   Route::resource('news', 'NewsController');
   Route::resource('tags', 'TagController', ['except' => ['create']]);
   Route::resource('jadwal', 'JadwalController');
+  Route::resource('klasmen', 'KlasmenController');
 });
 
 

@@ -12,7 +12,7 @@
     <div class="col-lg-12">
         <div class="ibox-" id="ibox2">
             <div class="ibox-title">
-                <h5>Example ibox panel</h5>
+                <h5>Buat POST Baru</h5>
             </div>
             <div class="ibox-content">
                 <div class="sk-spinner sk-spinner-wave">

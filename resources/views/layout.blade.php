@@ -55,7 +55,7 @@
                         <li>
                             <a href="#"><i class="fa fa-info-circle"></i> <span class="nav-label">Info</span><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
-                                <li><a href="#">Klasmen</a></li>
+                                <li><a href="{{ route('klasmen.index') }}">Klasmen</a></li>
                                 <li><a href="#">Pemain</a></li>
                                 <li><a href="#">Klub</a></li>
                                 <li><a href="{{ route('jadwal.index')}}">Schedule Dan Tiket</a></li>
@@ -85,7 +85,7 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Hello, {{ Auth::user()->email }}</span>
+                    <span class="m-r-sm text-muted welcome-message"><b>Hello, {{ Auth::user()->email }}</b></span>
                 </li>
                 <!--
 
@@ -204,6 +204,8 @@
         </nav>
         </div>
 
+
+
             @yield('pages')
 
         </div>
@@ -275,9 +277,9 @@
                     closeButton: true,
                     progressBar: true,
                     showMethod: 'slideDown',
-                    timeOut: 4000
+                    timeOut: 5000
                 };
-                toastr.success('Darah Kami BIRU', 'PERSIB BANDUNG');
+                toastr.success('{{ Auth::user()->email }}', 'Welcome');
 
             }, 1300);
 
